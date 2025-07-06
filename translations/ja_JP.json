@@ -1,0 +1,214 @@
+{
+  "fb-locale": "ja_JP",
+  "translations": {
+    "y7ytpzjv1/Y+s3HivTUHMQ==": {
+      "description": "Greeting",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "ようこそ",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "IYUmtYxQtGdt1MucjXrsVA==": {
+      "description": "Label with meaning 'at least number'",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{number}以上",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "ZIF1WhVQwt7WZJvFTEbMWw==": {
+      "description": "Label with meaning 'less than number'",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{number}未満",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "Oc/9PrbjfyLHS60BXceD1A==": {
+      "description": "A list of items of various types, for example: \"San Francisco; London; Tokyo\". {previous items} and {following items} are themselves lists that contain one or more items.",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{previous items}；{following items}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "AXXbKEUZuc0ji1IClRrOOw==": {
+      "description": "A list of items of various types separated by bullets, for example: \"San Francisco • London • Tokyo\". {previous items} and {following items} are themselves lists that contain one or more items.",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{previous items} • {following items}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "89ACgPMtnwlLDSeqhLBx2Q==": {
+      "description": "A list of items of various types separated by commas, for example: \"San Francisco, London, Tokyo\". {previous items} and {following items} are themselves lists that contain one or more items.",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{previous items}、{following items}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "icNetEL/crQv/PS6yhySVQ==": {
+      "description": "A list of items of various types, for example: \"item1, item2, item3 and item4\"",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{list of items}、および{last item}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "8eSaAzrWtAqn9ktNKfkaEg==": {
+      "description": "A list of items of various types, for example: \"item1, item2, item3 or item4\"",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{list of items}、または{last item}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "+IBI7kr/mMKdzp+3stDvkw==": {
+      "description": "A list of items of various types, for example: \"San Francisco; London; Tokyo\". {previous items} itself contains one or more items.",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{previous items}；{last item}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "55IeE8c0qqtjTU0lo7q9AA==": {
+      "description": "A list of items of various types separated by bullets, for example: \"San Francisco • London • Tokyo\". {previous items} contains one or more items.",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{list of items} • {last item}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "6PRJS0QalZfvaN8CkKCUCw==": {
+      "description": "A list of items of various types, for example: \"item1, item2, item3, item4\"",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{list of items}、{last item}",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "DgVircfekEFos1Q4P2A6ow==": {
+      "description": "Editing instructions",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "{=src/app/page.tsx} を編集して始めましょう。",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "hDGr+NPD6o5EP9XDQnrF3A==": {
+      "description": "In the phrase: \"Get started by editing {=src/app/page.tsx} .\"",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "src/app/page.tsx",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "zkC5BN1w6nyrq6ICzfvNag==": {
+      "description": "Label for instant reloads",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "保存して変更をすぐに確認しましょう。",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "/+HRTVusQqfLrjfdyano+A==": {
+      "description": "Deploy button label",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "今すぐデプロイ",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "a5f8aCKM3APo5yiCGHJUYQ==": {
+      "description": "Docs button label",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "ドキュメントを読む",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "tGI41kpUD9ST0/IHa2k7sw==": {
+      "description": "Learn button label",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "学習する",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "72SFNIQhMfjyk9Rkh8/dQQ==": {
+      "description": "Examples button label",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "サンプル",
+          "variations": {}
+        }
+      ],
+      "types": []
+    },
+    "wcTZ//N4FHLqLQzuyPH6bQ==": {
+      "description": "Link to fbtee",
+      "tokens": [],
+      "translations": [
+        {
+          "translation": "fbtee へ →",
+          "variations": {}
+        }
+      ],
+      "types": []
+    }
+  }
+}
