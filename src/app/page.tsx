@@ -1,4 +1,8 @@
-import Image from "next/image";
+/// <reference types="fbtee/ReactTypes.d.ts" />
+
+import Image from 'next/image';
+import LocaleSwitcher from './i18n/LocaleSwitcher';
+import Welcome from './Welcome';
 
 export default function Home() {
   return (
@@ -12,16 +16,21 @@ export default function Home() {
           height={38}
           priority
         />
+        <Welcome />
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
+            <fbt desc="Editing instructions">
+              Get started by editing{' '}
+              <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
+                src/app/page.tsx
+              </code>
+              .
+            </fbt>
           </li>
           <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
+            <fbt desc="Label for instant reloads">
+              Save and see your changes instantly.
+            </fbt>
           </li>
         </ol>
 
@@ -39,7 +48,7 @@ export default function Home() {
               width={20}
               height={20}
             />
-            Deploy now
+            <fbt desc="Deploy button label">Deploy now</fbt>
           </a>
           <a
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
@@ -47,9 +56,10 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            <fbt desc="Docs button label">Read our docs</fbt>
           </a>
         </div>
+        <LocaleSwitcher />
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
@@ -65,7 +75,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Learn
+          <fbt desc="Learn button label">Learn</fbt>
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
@@ -80,11 +90,11 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples
+          <fbt desc="Examples button label">Examples</fbt>
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://github.com/nkzw-tech/fbtee"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -95,7 +105,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          <fbt desc="Link to fbtee">Go to fbtee →</fbt>
         </a>
       </footer>
     </div>
