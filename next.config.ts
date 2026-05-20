@@ -1,7 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    swcPlugins: [
+      [
+        "@nkzw/swc-plugin-fbtee",
+        {
+          fbtCommon: {},
+          fbtEnumManifest: {},
+        },
+      ],
+    ],
+  },
 };
 
 export default nextConfig;

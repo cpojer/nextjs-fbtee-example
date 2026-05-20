@@ -1,23 +1,30 @@
-'use client';
+"use client";
 
-import { createLocaleContext } from 'fbtee';
-import AvailableLanguages from './AvailableLanguages';
-import { ReactNode } from 'react';
-
-import { useLocaleContext } from 'fbtee';
-import { useEffect } from 'react';
+import { createLocaleContext, useLocaleContext } from "fbtee";
+import AvailableLanguages from "./AvailableLanguages";
+import type { ReactNode } from "react";
+import { useEffect, useTransition } from "react";
 
 const ClientLocaleContext = ({ children }: { children: ReactNode }) => {
+  const [, startTransition] = useTransition();
   const { locale, setLocale } = useLocaleContext();
 
   useEffect(() => {
-    // @ts-expect-error
-    window.cookieStore.get('NEXT_LOCALE').then(({ value: maybeLocale }) => {
+    const cookieStore = (
+      window as Window & {
+        cookieStore?: {
+          get: (name: string) => Promise<{ value?: string } | undefined>;
+        };
+      }
+    ).cookieStore;
+
+    cookieStore?.get("NEXT_LOCALE").then((cookie) => {
+      const maybeLocale = cookie?.value;
       if (maybeLocale && maybeLocale !== locale) {
-        setLocale(maybeLocale);
+        startTransition(() => setLocale(maybeLocale));
       }
     });
-  }, []);
+  }, [locale, setLocale]);
 
   return children;
 };
@@ -26,8 +33,8 @@ const FbteeLocaleContext = createLocaleContext({
   availableLanguages: AvailableLanguages,
   clientLocales: [...navigator.languages, navigator.language],
   loadLocale: async (locale: string) => {
-    if (locale === 'ja_JP') {
-      return (await import('../../translations/ja_JP.json')).default.ja_JP;
+    if (locale === "ja_JP") {
+      return (await import("../../translations/ja_JP.json")).default.ja_JP;
     }
 
     return {};

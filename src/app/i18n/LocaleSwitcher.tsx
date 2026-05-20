@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import { useLocaleContext } from 'fbtee';
-import { useEffect, useTransition } from 'react';
-import AvailableLanguages from './AvailableLanguages';
-import { setLocale } from '../actions/set-locale';
+import { useLocaleContext } from "fbtee";
+import { useTransition } from "react";
+import AvailableLanguages from "./AvailableLanguages";
+import { setLocale } from "../actions/set-locale";
 
 export default function LocaleSwitcher() {
   const [, startTransition] = useTransition();
-  const { locale } = useLocaleContext();
+  const { locale, setLocale: setClientLocale } = useLocaleContext();
 
   return (
     <div>
@@ -15,7 +15,9 @@ export default function LocaleSwitcher() {
         className="cursor-pointer text-pink-500 underline select-none hover:no-underline dark:text-pink-400"
         onClick={() =>
           startTransition(() => {
-            setLocale(locale === 'ja_JP' ? 'en_US' : 'ja_JP');
+            const newLocale = locale === "ja_JP" ? "en_US" : "ja_JP";
+            setClientLocale(newLocale);
+            setLocale(newLocale);
             setTimeout(() => location.reload(), 1000);
           })
         }

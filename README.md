@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js fbtee SWC example
+
+This is a small Next.js app for testing `fbtee` with the native SWC compiler plugin. It intentionally does not include a Babel config; app code is compiled by Next/Turbopack using `@nkzw/swc-plugin-fbtee`.
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and run the Turbopack dev server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The app installs `fbtee`, `@nkzw/swc-plugin-fbtee`, and `@nkzw/fbtee-cli` from npm so it exercises the published packages.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build
 
-## Learn More
+```bash
+pnpm build
+```
 
-To learn more about Next.js, take a look at the following resources:
+`next.config.ts` wires the plugin through `experimental.swcPlugins`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Translations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The checked-in Japanese translations are in `src/translations/ja_JP.json`. The app imports them directly so the locale switcher can verify runtime translation after the SWC transform.
 
-## Deploy on Vercel
+Phrase collection still belongs to the `fbtee` CLI. The SWC plugin is only the runtime compiler for the Next.js build.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm fbtee:collect
+pnpm fbtee:translate
+```

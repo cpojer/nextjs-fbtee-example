@@ -1,0 +1,24 @@
+{
+  "ja_JP": {
+    "1u0skA": "ようこそ",
+    "25K17a": "保存して変更をすぐに確認しましょう。",
+    "4fXWPD": "fbtee へ →",
+    "VudYz": "ドキュメントを読む",
+    "2VPV74": {
+      "*": "{number}以上"
+    },
+    "1REuSN": {
+      "*": "{number}未満"
+    },
+    "3uo8du": "{previous items}；{following items}",
+    "1UOVWD": "{previous items} • {following items}",
+    "4DAMgG": "{previous items}、{following items}",
+    "1C255": "{list of items}, and {last item}",
+    "17bm9d": "{list of items}、および{last item}",
+    "phH4S": "{list of items}, or {last item}",
+    "3q8AmB": "{list of items}、または{last item}",
+    "4zJcb": "{previous items}；{last item}",
+    "1wKCx": "{list of items} • {last item}",
+    "3Q0iaX": "{list of items}、{last item}"
+  }
+}
