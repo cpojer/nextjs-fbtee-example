@@ -1,6 +1,6 @@
-# Next.js fbtee SWC example
+# Next.js fbtee Oxc example
 
-This is a small Next.js app for testing `fbtee` with the native SWC compiler plugin. It intentionally does not include a Babel config; app code is compiled by Next/Turbopack using `@nkzw/swc-plugin-fbtee`.
+This is a small Next.js app for testing `fbtee` with the native Oxc transform. It intentionally does not include a Babel config; app code is compiled by Next/Turbopack using `@nkzw/next-plugin-fbtee`.
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The app installs `fbtee`, `@nkzw/swc-plugin-fbtee`, and `@nkzw/fbtee-cli` from npm so it exercises the published packages.
+The app installs `fbtee`, `@nkzw/next-plugin-fbtee`, and `@nkzw/fbtee-cli` from npm so it exercises the published packages.
 
 ## Build
 
@@ -21,13 +21,13 @@ The app installs `fbtee`, `@nkzw/swc-plugin-fbtee`, and `@nkzw/fbtee-cli` from n
 pnpm build
 ```
 
-`next.config.ts` wires the plugin through `experimental.swcPlugins`.
+`next.config.ts` wraps the Next.js configuration with `@nkzw/next-plugin-fbtee`.
 
 ## Translations
 
-The checked-in Japanese translations are in `src/translations/ja_JP.json`. The app imports them directly so the locale switcher can verify runtime translation after the SWC transform.
+The checked-in Japanese translations are in `src/translations/ja_JP.json`. The app imports them directly so the locale switcher can verify runtime translation after the Oxc transform.
 
-Phrase collection still belongs to the `fbtee` CLI. The SWC plugin is only the runtime compiler for the Next.js build.
+Phrase collection still belongs to the `fbtee` CLI. The Next.js plugin runs the Oxc transform during the Next.js build.
 
 ```bash
 pnpm fbtee:collect

@@ -1,17 +1,9 @@
+import withFbtee from "@nkzw/next-plugin-fbtee";
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  experimental: {
-    swcPlugins: [
-      [
-        "@nkzw/swc-plugin-fbtee",
-        {
-          fbtCommon: {},
-          fbtEnumManifest: {},
-        },
-      ],
-    ],
-  },
-};
+const nextConfig: NextConfig = {};
 
-export default nextConfig;
+export default withFbtee({
+  fbtCommon: {},
+  fbtEnumManifest: {},
+})(nextConfig);

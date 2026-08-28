@@ -1,9 +1,8 @@
 autoInstallPeers: false
 allowBuilds:
-  '@swc/core': true
   sharp: true
 minimumReleaseAgeExclude:
-  - 'fbtee@1.8.0'
+  - 'fbtee@3.3.0'
   - '@nkzw/*'
   - '@types/node@25.9.1'
   - '@types/react@19.2.15'

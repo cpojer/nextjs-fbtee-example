@@ -11,15 +11,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "fbtee": "^1.8.0",
+    "fbtee": "^3.3.0",
     "next": "^16.2.6",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
-    "@nkzw/fbtee-cli": "^1.8.0",
-    "@nkzw/swc-plugin-fbtee": "^1.8.0",
-    "@swc/core": "^1.15.33",
+    "@nkzw/fbtee-cli": "^3.3.0",
+    "@nkzw/next-plugin-fbtee": "^3.3.0",
     "@tailwindcss/postcss": "^4.3.0",
     "@types/node": "^25.9.1",
     "@types/react": "^19.2.15",

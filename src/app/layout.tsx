@@ -6,8 +6,8 @@ import { cookies } from 'next/headers';
 import setupServerFbtee from './i18n/setupServerFbtee';
 
 export const metadata: Metadata = {
-  title: 'Next.js fbtee SWC Example',
-  description: 'A Next.js app compiled with the fbtee SWC plugin.',
+  title: 'Next.js fbtee Oxc Example',
+  description: 'A Next.js app compiled with the fbtee Oxc transform.',
 };
 
 export const dynamic = 'force-dynamic';

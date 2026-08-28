@@ -11,7 +11,7 @@ export default async function Home() {
     <main className="mx-auto flex min-h-screen max-w-2xl flex-col justify-center gap-8 p-8">
       <section className="space-y-4">
         <p className="text-sm font-medium text-pink-600 dark:text-pink-400">
-          Next.js + fbtee + SWC
+          Next.js + fbtee + Oxc
         </p>
         <h1 className="text-4xl font-semibold tracking-tight">
           <Welcome />
